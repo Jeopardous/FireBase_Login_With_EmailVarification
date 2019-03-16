@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100"
+    tools:context=".Home.HomeActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/relLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:background="@drawable/gray_border_top">
+
+        <include layout="@layout/layout_top_tabs" />
+
+    </RelativeLayout>
+    <!-- Middle Body-->
+    <RelativeLayout
+        android:id="@+id/relLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/relLayout1"
+        android:background="@drawable/gray_border_bottom"
+        android:layout_weight="65">
+
+        <include layout="@layout/layout_center_home" />
+
+        <include layout="@layout/layout_center_viewpager" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="20"
+        android:background="@drawable/gray_border_bottom">
+
+        <include layout="@layout/snippet_home_status_section" />
+
+    </RelativeLayout>
+    <!--Bottom navigation -->
+    <RelativeLayout
+        android:id="@+id/relLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+
+        <include layout="@layout/layout_bottom_navigationview" />
+    </RelativeLayout>
+
+</LinearLayout>
